@@ -1,12 +1,18 @@
 from final2 import *
 
 if __name__ == "__main__":
-    file_input = input("Enter file names to concatenate (comma-separated): ")
-    file_list = [file.strip() for file in file_input.split(",")]
+    file1 = "text1.txt" 
+    file2 = "text2.txt"
 
-    color_choice = input("Enter a color for output text (red, green, yellow, blue, magenta, cyan, white): ").strip().lower()
+    output_file = "output.txt"
+    color_choice = "green"
 
-    concat = FileConcatenator.from_file_list("output.txt", file_list, color=color_choice)
+    file_list = [file for file in [file1, file2] if os.path.exists(file)]
+    
+    if not file_list:
+        print("this file does not exist. Check the file names.")
+        exit()
+    concat = FileConcatenator.from_file_list(output_file, file_list, color=color_choice)
 
     print("\nConcatenation Complete!")
     print(concat.content)
