@@ -1,27 +1,39 @@
-# finals
-# Custom File Processor
+File Concatenation Program
 
-This repository demonstrates a custom file-processing project in Python that includes:
+Overview
 
-- **CustomFile**:
-  - Reads file contents using a generator.
-  - Uses a property (with getter/setter) to manage the file path.
-  - Implements static and class methods.
-  - Overloads `__str__` and `__add__` to output and concatenate file contents.
-  - Provides methods to concatenate two files (using `__add__`) and to concatenate any number of files.
+This Python program concatenates multiple text files into a single output file while allowing users to apply colored text formatting. It provides an object-oriented approach with decorators, class methods, and operator overloading for enhanced functionality.
 
-- **DecoratedFile**:
-  - Inherits from `CustomFile`.
-  - Overrides `__str__` to produce colored text output using a custom decorator.
-  - Overrides `concat_with` to log the concatenation process.
+Features
+Concatenates multiple text files into a single output file.
+Supports ANSI color formatting for output text.
+Implements a decorator for logging function execution.
+Uses object-oriented programming principles with inheritance.
+Includes operator overloading to allow concatenation of FileConcatenator objects.
+Provides a generator method to yield colored lines from the output file.
 
-- **Custom Decorator**:
-  - `@colorize("red")` (or any other ANSI color) changes the text color of the function's output without using any external package.
-## Setup Instructions
+Installation
+Ensure you have Python installed on your system. No external dependencies are required.
+Usage
+Running the Program
+Place the text files (text1.txt, text2.txt, etc.) in the same directory as the script.
+Run the program using the command:
+python main.py
 
-1. **Create Virtual Environment and Install Dependencies:**
+How It Works
+The program defines a BaseFileHandler class for handling file operations.
+The FileConcatenator class extends BaseFileHandler and implements file concatenation logic.
+The concatenate_files method reads and merges the content of multiple text files into a single output file.
+The file_line_generator method prints the concatenated file content with the selected color.
+The __add__ method enables merging two FileConcatenator instances into a new output file.
 
-   ```bash
-   make venv
-   make install
+Code Structure
+
+├── final2.py  # Contains the class definitions and file handling logic
+├── main.py    # Main execution script
+├── text1.txt  # Example input file
+├── text2.txt  # Example input file
+├── output.txt # Concatenated output file (generated after execution)
+└── README.md  # Documentation
+
 The code for the final assignment. (Mohamad Mahmoud, Adil Rehan, Given Pandala)
