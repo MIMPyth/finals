@@ -15,5 +15,13 @@ jobs:
    - name: Install dependencies 
      run:  |
        make install
-       
+   - name:lint with pylint
+     run:  |
+       make lint
+    -name: Test with pytest 
+      run:  |
+        make test 
+    -name: Format code with Python Black 
+     run:  |
+       make format 
      
