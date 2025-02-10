@@ -6,7 +6,7 @@ def log_execution(func):
         return func(*args, **kwargs)
     return wrapper
 
-class BaseFileHandler:
+class FileHandler:
     def __init__(self, filename, color="white"):
         self.filename = filename
         self.color = self.validate_color(color)
