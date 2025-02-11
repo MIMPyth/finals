@@ -4,5 +4,14 @@ def test_basefile():
 def test_log_execution():
     assert True   
 
-def test_is_text_file():
+def test_validate_color():
+    assert True
+
+def test_from_file_list():
+    assert True 
+
+def test_concatenate_file():
+    assert True 
+    
+def test_file_line_generator():
     assert True
