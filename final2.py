@@ -18,10 +18,6 @@ class BaseFileHandler:
         return os.path.getsize(self.filename) if os.path.exists(self.filename) else 0
 
     @staticmethod
-    def is_text_file(filename):
-        return filename.endswith(".txt")
-
-    @staticmethod
     def validate_color(color):
         colors = {
             "red": "\033[31m",
