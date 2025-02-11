@@ -1,5 +1,6 @@
 import os
 
+
 def log_execution(func):
     def wrapper(*args, **kwargs):
         print(f"Executing {func.__name__}...")
